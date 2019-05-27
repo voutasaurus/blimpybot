@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "blimpybot",
+    "alias": "blimpybot.now.sh",
+    "builds": [
+        { "src": "*.go", "use": "@now/go" }
+    ],
+    "env": {
+	"BOT_TOKEN": "@bot-token",
+	"BLIMPY_TEST": "responding",
+	"BLIMPY_TEST_WORD": "respondingwords",
+	"BLIMPY_TEST_MULTI": "responding multi words"
+    }
+}
