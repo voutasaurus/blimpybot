@@ -87,20 +87,5 @@ func handle(t *telegram) error {
 }
 
 func lookup(msg string) (string, error) {
-	return fmt.Sprintf("value(%s)=%q", msg, envmap()[strings.ToUpper(msg)]), nil
-}
-
-func envmap() map[string]string {
-	m := map[string]string{}
-	for _, e := range os.Environ() {
-		kv := strings.Split(e, "=")
-		k := kv[0]
-		if !strings.HasPrefix(k, "BLIMPY_") {
-			continue
-		}
-		v := strings.Join(kv[1:], "=")
-		key := strings.ReplaceAll(k[len("BLIMPY_"):], "_", " ")
-		m[key] = v
-	}
-	return m
+	return os.Getenv("BLIMPY_" + strings.ReplaceAll(strings.ToUpper(msg), " ", "_")), nil
 }

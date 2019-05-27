@@ -7,8 +7,8 @@
     ],
     "env": {
 	"BOT_TOKEN": "@bot-token",
-	"BLIMPY_TEST": "responding",
-	"BLIMPY_TEST_WORD": "respondingwords",
-	"BLIMPY_TEST_MULTI": "responding multi words"
+	"BLIMPY_HEY_THERE": "Blimpy Boy! Flying through the sky so fancy free!",
+	"BLIMPY_HEY_THERE_BLIMPY_BOY": "Flying through the sky so fancy free!",
+	"BLIMPY_WOW": "Thanks!"
     }
 }
